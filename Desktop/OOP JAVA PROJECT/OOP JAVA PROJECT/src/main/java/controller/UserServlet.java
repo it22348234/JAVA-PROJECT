@@ -55,7 +55,7 @@ public class UserServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		 
-		 response.sendRedirect("account-overview.jsp");
+		 response.sendRedirect("account-overview");
 	}
 	
 
@@ -78,7 +78,7 @@ public class UserServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		 
-		 response.sendRedirect("account-overview.jsp");
+		 response.sendRedirect("account-overview");
 		//doGet(request, response);
 	}
 

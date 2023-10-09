@@ -1,0 +1,12 @@
+@charset "ISO-8859-1";
+
+nav{
+	background-color: darkblue;
+	color: white !important;
+	a{
+		color: white;
+	}
+	.nav-link {
+		color: white !important;
+	}
+}
