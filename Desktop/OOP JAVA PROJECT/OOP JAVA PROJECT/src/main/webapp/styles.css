@@ -10,3 +10,6 @@ nav{
 		color: white !important;
 	}
 }
+.card-img-top{
+	height: 350px;
+}

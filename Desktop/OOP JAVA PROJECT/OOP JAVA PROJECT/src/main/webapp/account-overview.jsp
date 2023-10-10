@@ -14,14 +14,16 @@
   
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">
+     <h4> Hello, <%= request.getAttribute("name")%></h4>
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" style="color:white" href="index.jsp">Home</a>
+          <a class="nav-link active" style="color:white" href="index">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" style="color:white" aria-current="page" href="account-overview">Account Overview</a>
@@ -33,12 +35,11 @@
 
 
 <div class="container">
-        <h1 class="mt-5">Profile Update</h1>
-        
-       Hello, <%= request.getAttribute("name")%>
+       <h1 class="mt-5">Profile Update</h1>  
+       
        <br/>
    
-   <%
+ <%
 String profileImageUrl = (String) request.getAttribute("profileImageUrl");
 if (profileImageUrl != null && !profileImageUrl.isEmpty()) {
 %>
@@ -47,9 +48,6 @@ if (profileImageUrl != null && !profileImageUrl.isEmpty()) {
 }
 %>
    
-
-
-        
         
         <!-- Profile Photo Upload -->
        <form id="profileURLForm" class="mt-4">
@@ -89,6 +87,7 @@ if (profileImageUrl != null && !profileImageUrl.isEmpty()) {
          if (response.ok) {
              // Handle success, e.g., show a success message
              alert('Name updated successfully.');
+             location.reload();
          } else {
              // Handle error, e.g., show an error message
              alert('Error updating name.');
@@ -119,6 +118,7 @@ if (profileImageUrl != null && !profileImageUrl.isEmpty()) {
          if (response.ok) {
              // Handle success, e.g., show a success message
              alert('Profile Image updated successfully.');
+             location.reload();
          } else {
              // Handle error, e.g., show an error message
              alert('Error updating name.');

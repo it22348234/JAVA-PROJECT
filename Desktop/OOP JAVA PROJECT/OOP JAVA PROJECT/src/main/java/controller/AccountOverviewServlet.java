@@ -135,7 +135,7 @@ public class AccountOverviewServlet extends HttpServlet {
 	   
 	}
 	
-	private String getUsername(HttpServletRequest request) {
+	public static String getUsername(HttpServletRequest request) {
 		Cookie[] cookies = request.getCookies();
 		if (cookies != null) {
 		    for (Cookie cookie : cookies) {
