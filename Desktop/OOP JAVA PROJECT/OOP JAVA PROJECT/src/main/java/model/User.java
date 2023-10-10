@@ -2,19 +2,27 @@ package model;
 
 public class User {
 	protected int id;
-	public User( String username, Boolean isPremium, String name, String password) {
+	public User( String username, Boolean isPremium, String name, String password,String profileImageUrl) {
 		super();
 		this.username = username;
 		this.isPremium = isPremium;
 		this.name = name;
 		this.password = password;
+		this.profileImageUrl = profileImageUrl;
 	}
 	protected String username;
 	protected Boolean isPremium;
 	protected String name;
 	protected String password;
+	protected String profileImageUrl;
 	
 	
+	public String getProfileImageUrl() {
+		return profileImageUrl;
+	}
+	public void setProfileImageUrl(String profileImageUrl) {
+		this.profileImageUrl = profileImageUrl;
+	}
 	public int getId() {
 		return id;
 	}

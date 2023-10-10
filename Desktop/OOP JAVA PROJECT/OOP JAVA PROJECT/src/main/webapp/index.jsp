@@ -32,7 +32,7 @@
           <a class="nav-link" style="color:white" href="account-overview">Account Overview</a>
         </li>
         <li class="nav-item">
-	        <form action="<%= request.getContextPath() %>/login" method="post">
+	        <form action="<%= request.getContextPath() %>/login.jsp" method="post">
 			  <input style="background-color: darkblue;color:white;border:none" class="my-2 link-opacity-10" type="submit" value="Logout" >
 		    </form>
 	     </li>

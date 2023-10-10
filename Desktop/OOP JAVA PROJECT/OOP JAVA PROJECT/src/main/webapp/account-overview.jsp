@@ -35,15 +35,13 @@
 
 
 <div class="container">
-       <h1 class="mt-5">Profile Update</h1>  
-       
-       <br/>
-   
+
+<h1 class="mt-5" style="color:white">Profile Update</h1>  
  <%
 String profileImageUrl = (String) request.getAttribute("profileImageUrl");
 if (profileImageUrl != null && !profileImageUrl.isEmpty()) {
 %>
-    <img src="<%= profileImageUrl %>" alt="Profile Image" width="200" height="200">
+    <img style="border-radius:50px" src="<%= profileImageUrl %>" alt="Profile Image" width="200" height="200">
 <%
 }
 %>
@@ -51,6 +49,7 @@ if (profileImageUrl != null && !profileImageUrl.isEmpty()) {
         
         <!-- Profile Photo Upload -->
        <form id="profileURLForm" class="mt-4">
+       
         <h2>Edit Profile Picture</h2>
         <div class="mb-3">
            <input type="text" class="form-control" id="profileUrl" placeholder="Enter Profile Path Image URL">
